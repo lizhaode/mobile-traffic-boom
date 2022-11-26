@@ -1,0 +1,11 @@
+{
+  "name": "mobile-traffic-boom",
+  "version": "1.0.0",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
+  }
+}
