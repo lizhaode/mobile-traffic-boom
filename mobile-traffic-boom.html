@@ -128,7 +128,7 @@
       }
 
       async function download(url) {
-        let response = await axios.get(url);
+        let response = await axios.get(url + '?sig=' + Math.random(), { responseType: 'arraybuffer' });
         return parseInt(response.headers.getContentLength());
       }
 
