@@ -25,7 +25,7 @@
     <title>流量消失器</title>
   </head>
   <body>
-    <div class="card" style="width: 50%; margin: 0 auto">
+    <div class="card" style="width: 50%; margin: 0 auto" id="card-id">
       <div class="card-header" style="text-align: center">
         <h2>流量消失神器</h2>
         <h6 class="card-subtitle mb-2 text-muted" style="text-align: center">多线程消耗流量 运营商直呼内行</h6>
@@ -97,6 +97,10 @@
       </div>
     </div>
     <script type="text/javascript">
+      let isMobile = window.matchMedia('(any-pointer:coarse)').matches;
+      if (isMobile) {
+        document.getElementById('card-id').style.width = null;
+      }
       async function startClick() {
         let downloadLength = 0;
         let url = document.getElementById('d-url').value;
